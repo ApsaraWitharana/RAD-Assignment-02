@@ -2,7 +2,10 @@
 import './App.css'
 import {createBrowserRouter, RouterProvider} from "react-router";
 import {RootLayout} from "./component/RootLayout.tsx";
-import {Dashboard} from "./pages/Dashboard.tsx";
+import { Dashboard } from "./pages/Dashboard";
+import { Error } from "./pages/Error";
+import {Add} from "./pages/Add.tsx";
+import {CustomerProvider} from "./component/CustomerProvider.tsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -11,7 +14,7 @@ function App() {
       element: <RootLayout/>,
       children: [
         { path: "/", element: <Dashboard/> },
-
+        { path: "/add", element: <Add/> }
       ],
       errorElement: <Error />,
     },
@@ -22,10 +25,9 @@ function App() {
   ]);
 
   return (
-    <>
+    <CustomerProvider>
       <RouterProvider router={routes} />
-
-    </>
+    </CustomerProvider>
   )
 }
 
