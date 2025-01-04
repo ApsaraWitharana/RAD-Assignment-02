@@ -14,8 +14,21 @@ const itemSlice = createSlice({
     reducers:{
         setItem: (state, action: PayloadAction<Item>) => {
             state.items.push(action.payload);
-        }
-    }
-})
-export const {setItem} = itemSlice.actions;
+        },
+        updateItem: (state, action: PayloadAction<Item>) => {
+            const index = state.items.findIndex(
+                (item)=>item.code === action.payload.code
+            );
+            if (index !== -1) {
+                state.items[index] = action.payload;
+            }
+        },
+        deleteItem: (state, action: PayloadAction<string>) => {
+            state.items = state.items.filter(
+                (item) => item.code !== action.payload
+            );
+        },
+    },
+});
+export const {setItem,updateItem,deleteItem} = itemSlice.actions;
 export default itemSlice.reducer;
