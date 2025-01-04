@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Customer } from "../model/Customer.ts";
 
-interface CustomerState {
+interface CustomerSlice {
     customers: Customer[];
 }
 
-export const initialState: CustomerState = {
+export const initialState: CustomerSlice = {
     customers: [],
 };
 
