@@ -13,7 +13,7 @@ export function Navigation() {
     }, []);
     return (
         <>
-            <header className="bg-slate-500 w-full">
+            <header className="bg-slate-700 w-full">
                 <nav className="px-4 py-2 text-xl shadow-lg flex justify-between items-center">
                     {/* Center Section */}
                     <ul className="flex text-white space-x-4">
@@ -27,8 +27,8 @@ export function Navigation() {
                         <div className="text-white">
                             {currentTime.toLocaleDateString()} {currentTime.toLocaleTimeString()}
                         </div>
-                        <img src="src/assets/images-wp-profile.jpeg" alt="User Profile" className="w-10 h-10 rounded-full border border-white"/>
-                        <button className="bg-green-200 text-slate-500 px-3 py-1 rounded hover:bg-green-600">Sign In</button>
+                        <img src="src/assets/dp-for-girls-whatsapp-per.jpg" alt="User Profile" className="w-10 h-10 rounded-full border border-white"/>
+                        <button className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-500">Sign In</button>
                     </div>
                 </nav>
             </header>
