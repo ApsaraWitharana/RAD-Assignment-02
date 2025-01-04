@@ -36,8 +36,7 @@ This project is a simple **Customer and Item CRUD** application built using **Re
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/customer-item-crud.git
-    cd customer-item-crud
+   https://github.com/ApsaraWitharana/RAD-Assignment-02.git
     ```
 
 2. Install dependencies:
