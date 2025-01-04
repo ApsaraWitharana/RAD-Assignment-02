@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {updateCustomer} from "../slice/CustomerSlice.ts";
 import {RootState} from "../store/CustomerStore.ts";
 
-
 export function Update() {
     const dispatch = useDispatch();
     const [name, setName] = useState("");
@@ -19,7 +18,6 @@ export function Update() {
         setEmail(customer.email);
         setPhone(customer.phone);
     }
-
     function handleUpdateCustomer() {
         const updatedCustomer = { name, address, phone, email };
         dispatch(updateCustomer(updatedCustomer));
