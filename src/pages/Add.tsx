@@ -7,7 +7,7 @@ import {setItem} from "../slice/ItemSlice.ts";
 
 
 export function Add() {
-    // const navigate = useNavigate();
+
     //customer
     const dispatch = useDispatch();
     const [name, setName] = useState("");
@@ -26,7 +26,7 @@ export function Add() {
     function addCustomer() {
         const newCustomer = new Customer(name,address, email, phone);
         dispatch(setCustomer(newCustomer));
-        // navigate('/');
+
     }
     function addItem() {
         const newItem = { code: itemCode, name: itemName, quantity: itemQuantity, price: itemPrice };
